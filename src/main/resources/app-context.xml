@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Import contexts -->
+    <import resource="app-context-configuration.xml"/>
+    <import resource="app-context-datasource.xml"/>
+    <import resource="app-context-persistence.xml"/>
+    <import resource="app-context-liquibase.xml"/>
+    <import resource="app-context-web.xml"/>
+    <import resource="app-context-dozer.xml"/>
+
+    <!-- Scan the config -->
+    <context:component-scan base-package="org.simple.todo"/>
+
+</beans>

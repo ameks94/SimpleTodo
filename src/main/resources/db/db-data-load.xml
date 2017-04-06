@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="03_04_2017" author="Oleksii Dymytrov">
+        <loadData file="data/users.csv" tableName="users" relativeToChangelogFile="true">
+            <column name="enabled" type="boolean" />
+        </loadData>
+    </changeSet>
+
+    <changeSet id="03_07_2017" author="Oleksii Dymytrov">
+        <loadData file="data/notes.csv" tableName="notes" relativeToChangelogFile="true">
+            <column name="done" type="boolean" />
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

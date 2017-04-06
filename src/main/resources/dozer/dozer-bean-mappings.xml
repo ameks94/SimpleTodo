@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <mapping map-empty-string="false" map-null="false">
+        <class-a>org.simple.todo.model.Note</class-a>
+        <class-b>org.simple.todo.dto.NoteDTO</class-b>
+        <field>
+            <a>user.id</a>
+            <b>userId</b>
+        </field>
+    </mapping>
+
+    <mapping map-empty-string="false" map-null="false">
+        <class-a>org.simple.todo.model.User</class-a>
+        <class-b>org.simple.todo.dto.UserDTO</class-b>
+    </mapping>
+
+    <mapping map-empty-string="false" map-null="false">
+        <class-a>org.simple.todo.model.User</class-a>
+        <class-b>org.simple.todo.dto.ResponseLoginDTO</class-b>
+        <field>
+            <a>id</a>
+            <b>loginedUserId</b>
+        </field>
+    </mapping>
+
+</mappings>
